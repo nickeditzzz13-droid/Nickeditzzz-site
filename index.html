@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NickEditzzz | Car Edit Orders</title>
+    <meta
+      name="description"
+      content="Order cinematic car edits from NickEditzzz. Flat $10 per edit. Upload your photos or videos and place your order."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Sora:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="site-header">
+      <a
+        class="brand"
+        href="https://www.youtube.com/channel/UCALsRThzIgxiDTCuPvaQ0_A"
+        target="_blank"
+        rel="noreferrer"
+        >NickEditzzz</a
+      >
+      <nav class="site-nav">
+        <a
+          href="https://www.youtube.com/channel/UCALsRThzIgxiDTCuPvaQ0_A"
+          target="_blank"
+          rel="noreferrer"
+          >YouTube</a
+        >
+        <a href="#order">Order</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal">
+        <div class="hero-layout">
+          <div class="hero-copy-block">
+            <p class="tag">Car Edit Channel</p>
+            <h1>Clean car edits for a fixed $10.</h1>
+            <p class="subtitle">
+              Send your footage, I edit it, you post it. Perfect for TikTok, Reels,
+              YouTube Shorts, and full YouTube uploads.
+            </p>
+            <div class="hero-links">
+              <a class="btn" href="#order">Place Order</a>
+              <a
+                class="btn btn-secondary"
+                href="https://www.youtube.com/channel/UCALsRThzIgxiDTCuPvaQ0_A"
+                target="_blank"
+                rel="noreferrer"
+                >Channel</a
+              >
+            </div>
+          </div>
+          <figure class="hero-pfp">
+            <img src="./assets/nickeditzzz-pfp.png" alt="NickEditzzz YouTube profile image" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="samples" class="showcase reveal">
+        <article class="sample sample-logo">
+          <img
+            src="./assets/porsche-logo-cutout.png"
+            alt="Porsche logo"
+          />
+        </article>
+        <article class="sample sample-logo">
+          <img
+            src="./assets/mclaren-logo-cutout.png"
+            alt="McLaren logo"
+          />
+        </article>
+        <article class="sample sample-logo">
+          <img
+            src="./assets/ferrari-logo-cutout.png"
+            alt="Ferrari logo"
+          />
+        </article>
+      </section>
+
+      <section id="order" class="order reveal">
+        <h2>Order Form</h2>
+        <p class="order-note">
+          Price is always <strong>$10 per order.</strong> Fill this out and your
+          files + details will be sent to NickEditzzz by email.
+        </p>
+        <p class="order-note">
+          Order notifications go to <strong>nickeditzzz13@gmail.com</strong>.
+        </p>
+        <p class="order-note">
+          Upload files directly below. If your files are too large, add an optional media link.
+        </p>
+        <div class="payment-box">
+          <h3>Step 1: Pay $10</h3>
+          <p>
+            Interac works from most Canadian banks, so this is quick.
+          </p>
+          <ol class="payment-steps">
+            <li>Send a $10 Interac e-Transfer to <strong>nickeditzzz13@gmail.com</strong></li>
+            <li>Put this message: <strong>NickEditzzz car edit order</strong></li>
+            <li>Fill the form below and submit</li>
+          </ol>
+          <p class="tiny payment-tip"><strong>No payment = no edit delivery.</strong></p>
+        </div>
+
+        <form
+          id="order-form"
+          class="order-form"
+          method="POST"
+          action="https://formsubmit.co/nickeditzzz13@gmail.com"
+        >
+          <input type="hidden" name="_subject" value="New NickEditzzz Order - $10" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Your order was sent to NickEditzzz. You should get a reply soon."
+          />
+          <fieldset id="order-fieldset">
+            <label>
+              Your Name
+              <input type="text" name="customer_name" required />
+            </label>
+            <label>
+              Your Email
+              <input type="email" name="customer_email" required />
+            </label>
+            <label>
+              Interac Confirmation Number
+              <input
+                type="text"
+                name="payment_proof"
+                placeholder="Example: confirmation/reference number"
+                required
+              />
+            </label>
+            <label>
+              What style do you want?
+              <textarea
+                name="edit_style"
+                rows="4"
+                placeholder="Optional: dark cinematic, hard cuts, speed ramping"
+              ></textarea>
+            </label>
+            <label>
+              Upload Photos or Videos
+              <input
+                type="file"
+                name="attachment"
+                accept="image/*,video/*"
+                multiple
+                required
+              />
+            </label>
+            <label>
+              Optional Backup Link (only if files are too large)
+              <input
+                type="url"
+                name="media_link"
+                placeholder="Paste Google Drive / Dropbox / iCloud link (optional)"
+              />
+            </label>
+            <button type="submit" class="btn">Submit Order</button>
+          </fieldset>
+        </form>
+
+        <p class="tiny" id="status">
+          Order form ready. Submit sends your order email directly.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> NickEditzzz</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
